@@ -39,7 +39,7 @@ class FbGrapy:
 		return_me["languages"] = [];
 		for i in range(len(output["languages"])):
                         return_me["languages"].append(output["languages"][i]["name"]);
-
+		print "--------------------------------Task #1 My Info--------------------------------------";
 		print "Name: " + (str(return_me["name"]));
 		print "School: " , 
 		for i in range(len(return_me["school"])): print return_me["school"][i],
@@ -48,7 +48,6 @@ class FbGrapy:
 		print "Languages: " ,
                 for i in range(len(return_me["languages"])): print return_me["languages"][i],
 		print "";
-                print "--------------------------------My Info--------------------------------------";
 
 		return return_me;
 	
@@ -62,12 +61,12 @@ class FbGrapy:
                 output = json.loads(r.text)
 		return_me = output["data"];
 		if print_indicator:
+			print "--------------------------------Task #2 My Albums------------------------------------";
 			for i in range(len(return_me)):
 				print "name: " + str(return_me[i]["name"]);
 				print "id: " + str(return_me[i]["id"]);
 				print "Photo Count: " + str(return_me[i]["count"]);
 				print "**";
-			print "--------------------------------My Albums------------------------------------";
 		return return_me
 
 
@@ -86,6 +85,7 @@ class FbGrapy:
 		for i in range(len(my_albums_info)):
 			id_list.append(my_albums_info[i]["id"]);
 			album_list.append(my_albums_info[i]["name"]);
+		print "------------------------------Task #3 Photo Detail-----------------------------------";
 		for i in range(len(id_list)):
 			url = self.url + id_list[i] + "/photos/?limit=500";
 			r = requests.get(url, params=self.body);
