@@ -11,7 +11,7 @@
 import json
 import requests
 
-ACCESS_TOKEN = "EAAWJaOclG7kBAAOfGKZC9PZBfCIfsyAx3j6K1NOBKdTUW1HwTb97oO5S8KZCnQNxGZCZCWu2frEj1X9Jyfv0EGxXUpwUOgJQF2brTZBE2Yaew62UJ9SOXPkZCHVQqRMUzo9G6wsx1p5ayduWO7ZAxbrkok5zwdF1E2cZD"
+ACCESS_TOKEN = ""
 # Token expires July 23rd, 2016
 USER_ID = "me"  
 
